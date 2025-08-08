@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "@fontsource/literata/latin";
+@import "@fontsource/permanent-marker/latin";
+
+/* Data-attribute driven theme variants */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
+
+
+/* Gruvbox tokens by theme, using data-theme attribute */
+[data-theme='light'] {
+  --color-base: #fbf1c7;        /* light0 */
+  --color-surface: #f2e5bc;     /* light0_soft */
+  --color-muted: #a89984;       /* light4 */
+  --color-text: #282828;        /* dark0 */
+  --color-card: #ebdbb2;        /* light1 */
+
+  --color-primary: #458588;     /* neutral_blue */
+  --color-secondary: #b16286;   /* neutral_purple */
+  --color-accent: #d79921;      /* neutral_yellow */
+  --color-danger: #cc241d;      /* neutral_red */
+  --color-success: #98971a;     /* neutral_green */
+  --color-info: #83a598;        /* bright_blue */
+
+  --radius-card: 0.5rem;
+}
+
+[data-theme='dark'] {
+  --color-base: #1d2021;       /* dark0_hard */
+  --color-surface: #282828;    /* dark0 */
+  --color-muted: #7c6f64;      /* dark4 */
+  --color-text: #ebdbb2;       /* light1 */
+  --color-card: #3c3836;       /* dark1 */
+
+  --color-primary: #8ec07c;    /* bright_aqua */
+  --color-secondary: #d3869b;  /* bright_purple */
+  --color-accent: #fabd2f;     /* bright_yellow */
+  --color-danger: #fb4934;     /* bright_red */
+  --color-success: #b8bb26;    /* bright_green */
+  --color-info: #83a598;       /* bright_blue */
+}
+
+/* Map to Tailwind theme tokens so utilities resolve dynamically */
+@theme {
+  --color-base: var(--color-base);
+  --color-surface: var(--color-surface);
+  --color-muted: var(--color-muted);
+  --color-text: var(--color-text);
+  --color-card: var(--color-card);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-danger: var(--color-danger);
+  --color-success: var(--color-success);
+  --color-info: var(--color-info);
+
+  --radius-card: var(--radius-card);
+}
+
+/* App base styles using the theme tokens */
+body {
+  @apply bg-base text-text antialiased;
+  font-family: "Literata", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium shadow ring-1 transition-colors duration-200;
+  @apply bg-accent text-base/none;
+  @apply hover:brightness-95 active:brightness-90;
+}
+
+.card {
+  @apply bg-card text-text rounded-lg shadow ring-1 ring-muted;
+}
+
+.container {
+  @apply max-w-4xl;
+}
+

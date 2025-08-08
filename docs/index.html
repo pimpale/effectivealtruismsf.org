@@ -6,13 +6,22 @@
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="google-site-verification" content="GcD5U9hJp9dz59GuP3wsedUPjLmuOIAjf932toSudhg" />
     <meta
       name="description"
       content="Effective Altruism San Francisco"
     />
     <title>Effective Altruism San Francisco</title>
-    <style>body { background-color: #282828; }</style>
+    <script>
+      // No-flash theme: set initial data-theme before React mounts
+      (function() {
+        try {
+          var storageTheme = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = storageTheme ? storageTheme : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (_) {}
+      })();
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKRRKJS1VP"></script>
@@ -23,8 +32,8 @@
 
       gtag('config', 'G-ZKRRKJS1VP');
     </script>
-    <script type="module" crossorigin src="/assets/index-j9OJitPV.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CVrcNmj6.css">
+    <script type="module" crossorigin src="/assets/index-Ci75NcL8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B5hOQh5U.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
