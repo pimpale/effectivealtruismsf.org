@@ -11,18 +11,6 @@
       content="Effective Altruism San Francisco"
     />
     <title>Effective Altruism San Francisco</title>
-    <script>
-      // No-flash theme: set initial data-theme before React mounts
-      (function() {
-        try {
-          var storageTheme = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = storageTheme ? storageTheme : (prefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-        } catch (_) {}
-      })();
-    </script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKRRKJS1VP"></script>
     <script>

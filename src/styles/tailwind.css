@@ -73,8 +73,3 @@ body {
 .card {
   @apply bg-card text-text rounded-lg shadow ring-1 ring-muted;
 }
-
-.container {
-  @apply max-w-4xl;
-}
-

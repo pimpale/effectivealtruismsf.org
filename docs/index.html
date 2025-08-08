@@ -19,6 +19,8 @@
           var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
           var theme = storageTheme ? storageTheme : (prefersDark ? 'dark' : 'light');
           document.documentElement.setAttribute('data-theme', theme);
+          // Immediately apply background using CSS variable to avoid flash
+          document.documentElement.style.backgroundColor = 'var(--color-base)';
         } catch (_) {}
       })();
     </script>
@@ -32,8 +34,9 @@
 
       gtag('config', 'G-ZKRRKJS1VP');
     </script>
-    <script type="module" crossorigin src="/assets/index-Ci75NcL8.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B5hOQh5U.css">
+    <script type="module" crossorigin src="/assets/index-FgxRM0PX.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/Layout-DyVy2nAw.js">
+    <link rel="stylesheet" crossorigin href="/assets/Layout-CSrOkwn8.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
