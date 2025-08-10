@@ -5,6 +5,8 @@ import { createRoot } from 'react-dom/client';
 import '../styles/tailwind.css';
 import Layout from '../components/Layout';
 import life_paths from '../assets/life_paths.jpg';
+import community from '../assets/community.jpg';
+import { BoxArrowUpRight } from 'react-bootstrap-icons';
 
 function App() {
   return (
@@ -48,10 +50,10 @@ function App() {
               <p className="text-base-content/70">Learn, connect, and collaborate at weekly public events.</p>
             </div>
           </a>
-          <a className="card bg-base-100 border border-base-200 hover:border-base-300 transition p-6" href="/resources.html">
+          <a className="card bg-base-100 border border-base-200 hover:border-base-300 transition p-6" href="/about.html">
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold">Career & Giving Resources</h3>
-              <p className="text-base-content/70">Explore curated guides on careers, cause areas, and effective giving.</p>
+              <h3 className="text-xl font-semibold">About EA & Our Chapter</h3>
+              <p className="text-base-content/70">Learn more about effective altruism and our chapter.</p>
             </div>
           </a>
           <a className="card bg-base-100 border border-base-200 hover:border-base-300 transition p-6" href="/get-involved.html">
@@ -71,19 +73,37 @@ function App() {
               economic growth, and AI safety.
             </p>
             <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
-              <a className="btn btn-outline" href="/resources.html">See the EA Handbook</a>
-              <a className="btn btn-outline" href="/about.html">About EA & Our Chapter</a>
+
+              <a className="btn btn-outline" href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism">
+                Introduction to Effective Altruism
+                <span className="sr-only"> (opens in new tab)</span>
+                <BoxArrowUpRight aria-hidden="true" />
+              </a>
+              <a
+                className="btn btn-outline"
+                href="https://forum.effectivealtruism.org/handbook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                See the EA Handbook
+                <span className="sr-only"> (opens in new tab)</span>
+                <BoxArrowUpRight aria-hidden="true" />
+              </a>
             </div>
           </div>
           <div className="not-prose">
-            <div className="skeleton w-full aspect-[16/9] min-h-64 rounded-xl" />
+            <div className=" w-full min-h-64 rounded-xl" >
+              <img src={life_paths} alt="Life paths" className="w-full h-full object-cover rounded-xl" />
+            </div>
           </div>
         </section>
 
         {/* Info: Connect with the community (row 2, 50/50, image left) */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="not-prose order-2 md:order-1">
-            <div className="skeleton w-full aspect-[16/9] min-h-64 rounded-xl" />
+            <div className=" w-full min-h-64 rounded-xl" >
+              <img src={community} alt="Community" className="w-full h-full object-cover rounded-xl" />
+            </div>
           </div>
           <div className="prose max-w-none order-1 md:order-2">
             <h2>Connect with the community</h2>

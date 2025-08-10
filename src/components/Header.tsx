@@ -13,7 +13,6 @@ const Header: React.FC = () => {
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/events.html">Events</a></li>
-                <li><a href="/resources.html">Resources</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/get-involved.html">Get Involved</a></li>
               </ul>
@@ -25,7 +24,6 @@ const Header: React.FC = () => {
             <ul className="menu menu-horizontal px-1">
               <li><a href="/index.html">Home</a></li>
               <li><a href="/events.html">Events</a></li>
-              <li><a href="/resources.html">Resources</a></li>
               <li><a href="/about.html">About</a></li>
               <li><a href="/get-involved.html">Get Involved</a></li>
             </ul>
