@@ -6,6 +6,7 @@ import '../styles/tailwind.css';
 import Layout from '../components/Layout';
 import life_paths from '../assets/life_paths.jpg';
 import community from '../assets/community.jpg';
+import ea_sf from '../assets/ea_sf.jpg';
 import { BoxArrowUpRight } from 'react-bootstrap-icons';
 
 function App() {
@@ -15,12 +16,11 @@ function App() {
         {/* Hero with placeholders */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[75vh]">
           <div className="space-y-6">
-            <span className="badge badge-neutral">Effective Altruism San Francisco</span>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-              A resource hub and community — combining compassion and reason to do the most good.
+              San Francisco Effective Altruism
             </h1>
             <p className="text-lg text-base-content/70 max-w-prose">
-              Inspired by established chapters, we support people in making impactful, informed decisions via mentorship, events, and curated resources.
+              Building San Francisco's community of people committed to using evidence and reason to do the most good.
             </p>
             <div className="flex flex-wrap gap-3">
               <a className="btn btn-primary" href="/get-involved.html">Get Involved</a>
@@ -28,17 +28,7 @@ function App() {
             </div>
           </div>
           <div className="w-full">
-            <div className="mockup-window border bg-base-200">
-              <div className="min-h-[380px] bg-base-100 flex items-center justify-center">
-                <div className="text-center space-y-2">
-                  <div className="skeleton h-8 w-56 mx-auto" />
-                  <div className="skeleton h-4 w-72 mx-auto" />
-                  <div className="skeleton h-4 w-64 mx-auto" />
-                  <div className="mt-4 skeleton h-10 w-40 mx-auto" />
-                  <p className="mt-4 text-sm text-base-content/60">Interactive widget placeholder</p>
-                </div>
-              </div>
-            </div>
+            <img src={ea_sf} alt="EA San Francisco" className="w-full h-full object-cover rounded-xl" />
           </div>
         </section>
 

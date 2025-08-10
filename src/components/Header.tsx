@@ -17,7 +17,7 @@ const Header: React.FC = () => {
                 <li><a href="/get-involved.html">Get Involved</a></li>
               </ul>
             </div>
-            <a href="/index.html" className="btn btn-ghost text-xl">EASF</a>
+            <a href="/index.html" className="btn btn-ghost text-xl">EA San Francisco</a>
           </div>
 
           <div className="navbar-end hidden lg:flex">
