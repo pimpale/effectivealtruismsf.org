@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 // Tailwind CSS (with Gruvbox variables)
 import '../styles/tailwind.css';
 import Layout from '../components/Layout';
+import life_paths from '../assets/life_paths.jpg';
 
 function App() {
   return (
@@ -61,33 +62,43 @@ function App() {
           </a>
         </section>
 
-        {/* Info sections inspired by EA NYC & EA DC */}
-        <section className="grid lg:grid-cols-2 gap-8 items-start">
+        {/* Info: Paths to impact (row 1, 50/50) */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="prose max-w-none">
             <h2>Paths to making an impact</h2>
             <p>
               Depending on your background and interests, there are many ways to contribute: global health, biosecurity, animal welfare,
-              economic growth, AI safety, climate change, mental health, and movement building.
+              economic growth, and AI safety.
             </p>
             <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
               <a className="btn btn-outline" href="/resources.html">See the EA Handbook</a>
               <a className="btn btn-outline" href="/about.html">About EA & Our Chapter</a>
             </div>
           </div>
-          <div className="prose max-w-none">
+          <div className="not-prose">
+            <div className="skeleton w-full aspect-[16/9] min-h-64 rounded-xl" />
+          </div>
+        </section>
+
+        {/* Info: Connect with the community (row 2, 50/50, image left) */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="not-prose order-2 md:order-1">
+            <div className="skeleton w-full aspect-[16/9] min-h-64 rounded-xl" />
+          </div>
+          <div className="prose max-w-none order-1 md:order-2">
             <h2>Connect with the community</h2>
             <p>
               Join events, find peers with similar interests, and get matched for a 1-on-1 to discuss your goals.
               Subscribe to our newsletter to keep up with opportunities and updates.
             </p>
             <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
-              <a className="btn" href="/events.html">Events Calendar</a>
-              <a className="btn" href="/get-involved.html">Newsletter & Slack</a>
+              <a className="btn btn-outline" href="/events.html">Events Calendar</a>
+              <a className="btn btn-outline" href="/get-involved.html">Newsletter & Slack</a>
             </div>
           </div>
         </section>
 
-        
+
       </div>
     </Layout>
   );
